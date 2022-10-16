@@ -1,0 +1,17 @@
+<script>
+    var record = new promise((res,rej)=>{
+        console.log(typeof res,typeof rej);
+         res ("Take is complete")
+        // rej("Take is Incompleted")
+    })
+    console.log(record);
+    record.then((value)=>{
+    // then is handler for resolved values
+        console.log(value);
+    }).catch((error)=>{
+        console.log(error);
+    }).finally(()=>{
+        console.log("proceed for next task");
+    })
+
+</script>
